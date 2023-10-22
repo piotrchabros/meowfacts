@@ -1,1 +1,5 @@
+<mat-toolbar *ngIf="isSignedIn()" class="d-flex justify-content-between">
+    <span>Meowfacts</span>
+    <mat-icon [ngbTooltip]="'Wyloguj'" (click)="signOut()">exit_to_app</mat-icon>
+</mat-toolbar>
 <router-outlet></router-outlet>

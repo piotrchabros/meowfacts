@@ -7,6 +7,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
+import {MaterialModule} from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {AppComponent} from './app.component';
     BrowserModule,
     AppRoutingModule,
     InfiniteScrollModule,
+    MaterialModule,
     MatPasswordStrengthModule.forRoot(),
     NgbModule,
     BrowserAnimationsModule

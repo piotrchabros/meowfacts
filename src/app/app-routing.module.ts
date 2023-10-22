@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {authenticationGuard} from './auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'meowfacts',
-    loadChildren: () => import('./meowfacts/meowfacts.module').then(m => m.MeowfactsModule)
+    loadChildren: () => import('./meowfacts/meowfacts.module').then(m => m.MeowfactsModule),
+    canActivate: [authenticationGuard()]
   }
 ];
 

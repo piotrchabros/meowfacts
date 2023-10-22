@@ -1,1 +1,10 @@
-meowfacts
+<div class="d-flex meowfacts flex-column p-5"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="loadMoreMeowfacts()">
+    
+    <mat-card class="p-5 m-2" *ngFor="let meowfact of meowfactsData">
+        {{ meowfact }}
+    </mat-card>
+</div>
